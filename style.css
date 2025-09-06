@@ -1,0 +1,58 @@
+body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0c0d12;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+        .text-neon-cyan {
+            color: #2dd4bf;
+        }
+        .bg-gradient-neon {
+            background-image: linear-gradient(45deg, #10b981, #2dd4bf);
+        }
+        .hero-bg-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231f2937' fill-opacity='0.1'%3E%3Cpath d='M36 34.225V39.42L32.175 36.325V31.13zM28.475 31.525L32.325 34.625V39.82l-3.85-3.095z'/%3E%3Cpath d='M6 6L0 0v60L6 60V6zm0 54V6L60 6v54H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-size: 120px 120px;
+        }
+        .feature-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05), 0 0 0 3px #2dd4bf;
+        }
+        .transform-on-hover:hover {
+            transform: translateY(-5px);
+        }
+        .transition-transform-scale {
+            transition: transform 0.3s ease-in-out;
+        }
+        .transition-all-300 {
+            transition: all 0.3s ease-in-out;
+        }
+        .loader {
+            border: 4px solid #3b82f6;
+            border-top: 4px solid #34d399;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s cubic-bezier(0.5, 0.25, 0.5, 0.75) infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .glowing-border {
+            border: 1px solid transparent;
+            position: relative;
+            background-clip: padding-box;
+        }
+        .glowing-border::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            z-index: -1;
+            border-radius: 1rem;
+            background: linear-gradient(45deg, #10b981, #06b6d4, #10b981);
+            animation: glow 3s ease-in-out infinite;
+        }
+        @keyframes glow {
+            0%, 100% { filter: hue-rotate(0deg); }
+            50% { filter: hue-rotate(180deg); }
+        }
